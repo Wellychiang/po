@@ -1,0 +1,16 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def init():
+    return 'Hello'
+
+
+@app.route('/home')
+def homepage():
+    return render_template('homepage.html')
+
+
+app.run(debug=True)
